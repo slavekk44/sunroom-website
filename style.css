@@ -1,113 +1,71 @@
-/* --- Reset i podstawowe ustawienia --- */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
-/* --- Header / hero --- */
+/* HEADER */
 header {
-  background: url('https://picsum.photos/1600/900?grayscale') center/cover no-repeat;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-}
-header h1 {
-  font-size: 3em;
-  background-color: rgba(0,0,0,0.5);
-  padding: 20px;
-  border-radius: 10px;
+    position: sticky;
+    top: 0;
+    background: #333;
+    color: #fff;
+    z-index: 1000;
 }
 
-/* --- Sekcje --- */
+.site-title {
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 0;
+    transition: top 0.3s;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: #222;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff9900;
+}
+
+/* SEKCJE */
 section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2em;
-  color: #222;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-/* --- Oferta --- */
-.offer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-.card {
-  background: #f5f5f5;
-  padding: 20px;
-  border-radius: 10px;
-  width: 280px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+#home { background: #f4f4f4; }
+#galeria { background: #ddd; }
+#blog { background: #bbb; }
+#about { background: #999; }
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-/* --- Galeria --- */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
-.gallery img {
-  width: 250px;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* --- Kontakt --- */
-section p, section a {
-  text-align: center;
-  display: block;
-  margin-top: 10px;
-  font-size: 1.1em;
-  color: #555;
-}
-section a {
-  color: #0077cc;
-  text-decoration: none;
-}
-section a:hover {
-  text-decoration: underline;
-}
-
-/* --- Footer --- */
-footer {
-  background: #222;
-  color: #ccc;
-  text-align: center;
-  padding: 20px;
-}
-
-/* --- Responsywność --- */
-@media(max-width: 768px) {
-  .offer {
-    flex-direction: column;
-    align-items: center;
-  }
-  .gallery img {
-    width: 100%;
-    max-width: 300px;
-  }
+/* RESPONSYWNE */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
