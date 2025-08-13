@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja Strona</title>
+    <title>Sun</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header id="header">
-        <div class="site-title">Moja Strona</div>
-        <nav>
+        <div class="site-title">Sunroom & Saunas</div>
+        <button id="menu-toggle" aria-label="Otwórz menu">
+            ☰
+        </button>
+        <nav id="main-nav">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#galeria">Galery</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
@@ -21,12 +24,12 @@
     </header>
 
     <section id="home">
-        <h1>Witamy na stronie</h1>
+        <h1>Welcome to Sunroom & Saunas</h1>
         <p>To jest sekcja Home.</p>
     </section>
 
     <section id="galeria">
-        <h1>Galeria</h1>
+        <h1>Galery</h1>
         <p>Zdjęcia i grafiki tutaj.</p>
     </section>
 
@@ -36,28 +39,12 @@
     </section>
 
     <section id="about">
-        <h1>O nas</h1>
+        <h1>About</h1>
         <p>Informacje o stronie lub autorze.</p>
     </section>
 
-    <script>
-        // Skrypt do ukrywania nazwy strony przy scrollu
-        let lastScroll = 0;
-        const header = document.getElementById('header');
-        const title = document.querySelector('.site-title');
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            if (currentScroll > lastScroll && currentScroll > 100) {
-                // scroll w dół – ukryj tytuł
-                title.style.top = '-60px';
-            } else {
-                // scroll w górę – pokaż tytuł
-                title.style.top = '0';
-            }
-            lastScroll = currentScroll;
-        });
-    </script>
+    <!-- Podłączamy osobny plik JS -->
+    <script src="script.js"></script>
 
 </body>
 </html>
