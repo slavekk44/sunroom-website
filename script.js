@@ -24,3 +24,38 @@ window.addEventListener('scroll', () => {
 menuToggle.addEventListener('click', () => {
     navList.classList.toggle('show');
 });
+
+// KARUZELA NETFLIX STYLE
+const carousel = document.querySelector('.carousel');
+const cards = document.querySelectorAll('.carousel .card');
+let activeIndex = 0;
+let isFullscreen = false;
+
+function updateCarousel() {
+    cards.forEach((card, index) => {
+        card.classList.remove('active');
+        if (index === activeIndex) card.classList.add('active');
+    });
+    const offset = -activeIndex * (cards[0].offsetWidth + 20) + carousel.offsetWidth / 2 - cards[0].offsetWidth / 2;
+    carousel.style.transform = `translateX(${offset}px)`;
+}
+
+cards.forEach((card, index) => {
+    card.addEventListener('click', () => {
+        if (!isFullscreen) {
+            if (index === activeIndex) {
+                card.classList.add('fullscreen');
+                isFullscreen = true;
+            } else {
+                activeIndex = index;
+                updateCarousel();
+            }
+        } else {
+            card.classList.remove('fullscreen');
+            isFullscreen = false;
+        }
+    });
+});
+
+// ustawienie początkowe
+updateCarousel();
