@@ -88,7 +88,7 @@ section {
 }
 
 #blog { background: #bbb; }
-#about { background: #999; }
+#about { background: #999;min-height: 95vh; }
 
 h1 {
     margin-bottom: 20px;
