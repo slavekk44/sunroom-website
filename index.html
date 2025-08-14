@@ -8,56 +8,83 @@
 </head>
 <body>
 
-    <header id="header">
-        <div class="site-title">Sunroom & Saunas</div>
-        <button id="menu-toggle" aria-label="Otwórz menu">☰</button>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#galery">Galery</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
-    </header>
+<header id="header">
+    <div class="site-title">Sunroom & Saunas</div>
+    <button id="menu-toggle" aria-label="Otwórz menu">☰</button>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#galeria">Gallery</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <section id="home">
-        <h1>Welcome to Sunroom & Saunas</h1>
-        <p>To jest sekcja Home.</p>
-    </section>
+<section id="home">
+    <h1>Welcome to Sunroom & Saunas</h1>
+    <p>To jest sekcja Home.</p>
+</section>
 
-    <section id="galery">
-        <h1>Galery</h1>
-        <p>Zdjęcia i grafiki tutaj.</p>
+<section id="galeria">
+    <h1>Galery</h1>
+    <div class="galeria-top">
         <div class="carousel">
-            <div class="card active">
-    <img src="images/1.jpg" alt="sunroom 1">
-</div>
-<div class="card">
-    <img src="images/2.jpg" alt="sunroom 2">
-</div>
-<div class="card">
-    <img src="images/3.jpg" alt="sauna 3">
-</div>
-<div class="card">
-    <img src="images/4.jpg" alt="sauna 4">
-</div>
-<div class="card">
-    <img src="images/5.jpg" alt="sauna 5">
-</div>
+            <button class="prev">&#10094;</button>
+            <div class="carousel-track">
+                <div class="carousel-item active">
+                    <img src="img/z1.jpg" alt="sunroom 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/z2.jpg" alt="sunroom 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/z3.jpg" alt="sauna 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/z4.jpg" alt="sauna 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/z5.jpg" alt="sauna 5">
+                </div>
+            </div>
+            <button class="next">&#10095;</button>
         </div>
-    </section>
+    </div>
+    <div class="galeria-bottom">
+       
+    </div>
+</section>
 
-    <section id="blog">
-        <h1>Blog</h1>
-        <p>Wpisy blogowe tutaj.</p>
-    </section>
 
-    <section id="about">
-        <h1>About Us</h1>
-        <p>Informacje o stronie lub autorze.</p>
-    </section>
+<!-- Lightbox -->
+<div id="lightbox">
+    <img id="lightbox-img" src="" alt="">
+</div>
 
-    <script src="script.js"></script>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox">
+    <span id="close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<section id="blog">
+    <h1>Blog</h1>
+    <p>Wpisy blogowe tutaj.</p>
+</section>
+
+<section id="about">
+    <h1>About Us</h1>
+    <p>Informacje o stronie lub autorze.</p>
+</section>
+
+
+
+<div id="fixed-cta">
+    <span id="cta-text"> Get your free quote today — Call now: 0744 844 0000</span>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
