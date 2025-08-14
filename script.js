@@ -76,7 +76,7 @@ updateCarousel();
 const ctaTexts = [
     "Get your free quote — Call now: 0744 844 0000",
     "Transform your home with a sauna or sunroom — Tel: 0744 844 0000",
-    "Make your dream come true — Free consultation: 0744 844 0000",
+    "Make your dream come true — Call now 0744 844 0000",
     "Enjoy your sauna or sunroom in no time — Call: 0744 844 0000"
 ];
 
