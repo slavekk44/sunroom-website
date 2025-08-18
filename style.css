@@ -512,6 +512,52 @@ h1 {
 .contact-info a:hover {
   text-decoration: underline;
 }
+.phone,
+a[href^="mailto:"] {
+  font-size: 1.8rem; /* lub 1.5rem jeśli chcesz naprawdę większe */
+  font-weight: bold;  /* opcjonalnie, żeby bardziej się wyróżniało */
+  color: #ff8c42;        /* kolor pasujący do strony */
+  text-decoration: none; /* usuwa podkreślenie, opcjonalnie */
+}
+
+.phone:hover,
+a[href^="mailto:"]:hover {
+  color: #ff8c42; /* delikatny efekt hover */
+}
+/* wspólne style dla linków kontaktowych */
+.phone, .email {
+  font-size: 1.8rem;       /* większy tekst */
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+}
+
+/* czarna linia pod numerem/email */
+/*
+.phone::after,
+.email::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;             /* odstęp od tekstu */
+  /*width: 100%;
+  height: 3px;              /* grubość linii */
+/*  background-color: #000;    /* czarna linia */
+  /* border-radius: 2px;
+} */
+
+/* kontur + wypełnienie dla całego numeru lub emaila */
+.phone .outlined,
+.email .outlined {
+  color: #ff8c42;           /* wypełnienie pomarańczowe */
+  -webkit-text-stroke: 1px #333; /* kontur Webkit */
+  text-stroke: 1px #333;          /* kontur standardowy */
+  font-weight: bold;
+}
+
+
 
 .about-buttons {
   margin-top: 20px;
