@@ -138,6 +138,64 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// ------------------------------OUR PROJECT Caresule --------------
+const projectsTrack = document.querySelector('.projects-track');
+const projectsItems = Array.from(document.querySelectorAll('.projects-item'));
+const projectsPrevBtn = document.querySelector('.projects-prev');
+const projectsNextBtn = document.querySelector('.projects-next');
+const projectsLightbox = document.getElementById('projects-lightbox');
+const projectsLightboxImg = document.getElementById('projects-lightbox-img');
+
+let projectsActiveIndex = 0;
+
+function updateProjectsCarousel() {
+  const total = projectsItems.length;
+  const visible = total >= 5 ? 5 : total;
+  const order = [];
+
+  for (let i = -2; i <= visible - 3; i++) {
+    order.push((projectsActiveIndex + i + total) % total);
+  }
+
+  projectsTrack.innerHTML = '';
+  order.forEach((idx, pos) => {
+    const el = projectsItems[idx];
+    el.classList.remove('active');
+    if (pos === 2) el.classList.add('active'); // środkowa karta = aktywna
+    projectsTrack.appendChild(el);
+  });
+}
+
+function goToProjectsIndex(newIndex) {
+  projectsActiveIndex = (newIndex + projectsItems.length) % projectsItems.length;
+  updateProjectsCarousel();
+}
+
+function nextProject() { goToProjectsIndex(projectsActiveIndex + 1); }
+function prevProject() { goToProjectsIndex(projectsActiveIndex - 1); }
+
+projectsNextBtn.addEventListener('click', nextProject);
+projectsPrevBtn.addEventListener('click', prevProject);
+
+projectsTrack.addEventListener('click', e => {
+  const card = e.target.closest('.projects-item');
+  if (!card) return;
+
+  const clickedIndex = projectsItems.indexOf(card);
+  if (!card.classList.contains('active')) {
+    goToProjectsIndex(clickedIndex);
+  } else {
+    projectsLightboxImg.src = card.querySelector('img').src;
+    projectsLightbox.classList.add('show');
+  }
+});
+
+projectsLightbox.addEventListener('click', () => {
+  projectsLightbox.classList.remove('show');
+});
+
+// Uruchomienie
+updateProjectsCarousel();
 
 
 
