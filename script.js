@@ -127,6 +127,21 @@ window.addEventListener('wheel', (e) => {
         scrollToSection(currentSection - 1);
     }
 });
+
+// .blog  FADE ANNIMATION VISIBLE.
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll('.blog-cards .nlog');
+  cards.forEach((card, i) => {
+    setTimeout(() => {
+      card.classList.add('visible');
+    }, i * 200); // 200ms odstępu między kartami
+  });
+});
+
+
+
+
+
 // Otwieranie i zamykanie modala
 // const modal = document.getElementById('quote-modal');
 // const btn = document.getElementById('open-quote');

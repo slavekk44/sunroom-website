@@ -80,6 +80,12 @@ section {
     flex-direction: column;
 }
 /* Górna część (karuzele) – 80% wysokości sekcji */
+#galeria h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
 .galeria-top {
     flex: 8;
     display: flex;
@@ -88,7 +94,7 @@ section {
 }
 
 #blog { background: #bbb; }
-#about { background: #999;min-height: 95vh; }
+#about { background: #a4a4a4;min-height: 95vh; }
 
 h1 {
     margin-bottom: 20px;
@@ -250,6 +256,7 @@ h1 {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.05); }
 }
+/* HOME ------------------------------------ SECTION UPDATE ------------------------------------ */
 /*  This is new for home*/
 .hero {
   display: flex;
@@ -322,7 +329,145 @@ h1 {
   font-size: 1.2em; /* trochę większe niż reszta tekstu */
   text-transform: uppercase;
 }
-/* ABOUT SECTION */
+
+/* BLOG ------------------------------------ SECTION------------------------------------ */
+
+#blog {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#blog h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.blog-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.nlog {
+  background: #fff;
+  padding: 20px;
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(20px); /* początkowe przesunięcie */
+  animation: fadeInUp 0.8s forwards; /* nowa animacja */
+}
+
+.nlog:nth-child(1) { animation-delay: 0.2s; }
+.nlog:nth-child(2) { animation-delay: 0.4s; }
+.nlog:nth-child(3) { animation-delay: 0.6s; }
+
+.nlog:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.nlog img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.nlog h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.nlog p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* #blog {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#blog h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.blog-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.nlog {
+  background: #fff;
+  padding: 20px;
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.nlog:nth-child(1) { animation-delay: 0.2s; }
+.nlog:nth-child(2) { animation-delay: 0.4s; }
+.nlog:nth-child(3) { animation-delay: 0.6s; }
+
+.nlog:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.nlog img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.nlog h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.nlog p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+ */
+
+/* ABOUT ------------------------------------ SECTION ------------------------------------ */
 .about {
   background: #f9f9f9;
   padding: 60px 20px;
