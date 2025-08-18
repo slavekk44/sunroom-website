@@ -250,3 +250,57 @@ h1 {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.05); }
 }
+/*  This is new for home*/
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.hero-content h1 span {
+  color: #f04e23; /* mocny akcent np. pomarańczowy */
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.cta-btn {
+  background: #f04e23;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #d63f1a;
+}
+
+.hero-image {
+  flex: 1;
+  background: url('images/sunroom-hero.jpg') no-repeat center center/cover;
+  border-radius: 20px;
+  min-height: 400px;
+  margin-left: 50px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+}
