@@ -612,13 +612,13 @@ h1 {
 .about h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #333;
+  color: #0c0c0c;
 }
 
 .about p {
   font-size: 1.1rem;
   margin-bottom: 15px;
-  color: #0c0c0c;
+  color: #000000;
   line-height: 1.6;
 }
 
