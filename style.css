@@ -298,9 +298,35 @@ h1 {
 
 .hero-image {
   flex: 1;
-  background: url('images/sunroom-hero.jpg') no-repeat center center/cover;
+  background: url('img/saunaSunroom.png') no-repeat center center/cover;
   border-radius: 20px;
-  min-height: 400px;
+  min-height: 500px;
   margin-left: 50px;
   box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
 }
+/* hero Images */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  animation: changeHero 12s infinite;
+}
+
+.highlight {
+  color: #ff6600;   /* pomarańczowy przyciąga uwagę */
+  font-size: 1.2em; /* trochę większe niż reszta tekstu */
+  text-transform: uppercase;
+}
+
+/* BACKGROUND IMAGE CHANGING */
+/* 
+@keyframes changeHero {
+  0%   { background-image: url('img/z1.jpg'); }
+  50%  { background-image: url('img/z2.jpg'); }
+  100% { background-image: url('img/z3.jpg'); }
+} */
