@@ -127,3 +127,11 @@ window.addEventListener('wheel', (e) => {
         scrollToSection(currentSection - 1);
     }
 });
+// Otwieranie i zamykanie modala
+// const modal = document.getElementById('quote-modal');
+// const btn = document.getElementById('open-quote');
+// const span = document.querySelector('.modal .close');
+
+// btn.onclick = () => modal.style.display = 'block';
+// span.onclick = () => modal.style.display = 'none';
+// window.onclick = e => { if(e.target == modal) modal.style.display = 'none'; }
